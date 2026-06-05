@@ -2,7 +2,13 @@
 
 ![TycoonLE replay interface](assets/tycoonLE.png)
 
-TycoonLE is a reinforcement learning environment for transport-tycoon style logistics planning. It is implemented with JAX and Jumanji-style `reset` and `step` APIs, using fixed-shape observations for vectorized rollouts and a browser replay viewer for inspection.
+Tycoon Learning Environment (TycoonLE) is a reinforcement learning environment for economically grounded, long-horizon planning. Agents operate in a simulated logistics economy where they allocate capital, build transport routes, move cargo, manage debt, and optimize delayed returns.
+
+It is designed to study action legality, candidate-frontier decision interfaces, financing timing, delayed rewards, procedural variation, and replayable audit traces.
+
+TycoonLE uses a fixed-shape interface. Agents choose among valid route, finance, and wait candidates, making rollouts compatible with JAX transformations such as `jit`, `vmap`, and `scan`.
+
+The replay UI makes policies inspectable through route choices, cargo flow, financing behavior, reward, score, and profit over time.
 
 ## Install
 
