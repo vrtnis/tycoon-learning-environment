@@ -1,0 +1,123 @@
+from __future__ import annotations
+
+from typing import NamedTuple
+
+import chex
+
+
+class CandidateTable(NamedTuple):
+    kind: chex.Array
+    source: chex.Array
+    destination: chex.Array
+    cargo: chex.Array
+    mode: chex.Array
+    route: chex.Array
+    vehicles: chex.Array
+    months: chex.Array
+    amount: chex.Array
+    total_cost: chex.Array
+    monthly_profit: chex.Array
+    monthly_delivered: chex.Array
+    rank_score: chex.Array
+    requires_loan: chex.Array
+    feasible: chex.Array
+    directly_executable: chex.Array
+    path: chex.Array
+    path_length: chex.Array
+    terrain_cost: chex.Array
+    congestion: chex.Array
+    diagnostics: chex.Array
+
+
+class Observation(NamedTuple):
+    company: chex.Array
+    time: chex.Array
+    objective: chex.Array
+    metrics: chex.Array
+    score_breakdown: chex.Array
+    terrain: chex.Array
+    terrain_summary: chex.Array
+    node_features: chex.Array
+    route_features: chex.Array
+    candidate_features: chex.Array
+    action_mask: chex.Array
+    node_mask: chex.Array
+    route_mask: chex.Array
+
+
+class State(NamedTuple):
+    key: chex.PRNGKey
+    split: chex.Array
+    family: chex.Array
+    seed: chex.Array
+    width: chex.Array
+    height: chex.Array
+    terrain: chex.Array
+    terrain_mask: chex.Array
+    node_mask: chex.Array
+    node_kind: chex.Array
+    node_x: chex.Array
+    node_y: chex.Array
+    node_produces: chex.Array
+    node_accepts: chex.Array
+    node_storage: chex.Array
+    node_base_production: chex.Array
+    node_convert_from: chex.Array
+    node_convert_to: chex.Array
+    node_population: chex.Array
+    node_production_index: chex.Array
+    node_service_months: chex.Array
+    node_last_served_month: chex.Array
+    node_rating: chex.Array
+    objective_cargo: chex.Array
+    delivered_target: chex.Array
+    profit_target: chex.Array
+    route_target: chex.Array
+    max_debt_ratio: chex.Array
+    max_steps: chex.Array
+    max_months: chex.Array
+    max_loan: chex.Array
+    interest_rate: chex.Array
+    step: chex.Array
+    month: chex.Array
+    cash: chex.Array
+    loan: chex.Array
+    done: chex.Array
+    invalid_actions: chex.Array
+    first_delivery_month: chex.Array
+    route_mask: chex.Array
+    route_source: chex.Array
+    route_destination: chex.Array
+    route_cargo: chex.Array
+    route_mode: chex.Array
+    route_path: chex.Array
+    route_path_length: chex.Array
+    route_distance: chex.Array
+    route_terrain_cost: chex.Array
+    route_build_cost: chex.Array
+    route_vehicle_cost: chex.Array
+    route_vehicles: chex.Array
+    route_delivered: chex.Array
+    route_revenue: chex.Array
+    route_operating_cost: chex.Array
+    route_profit: chex.Array
+    route_utilization: chex.Array
+    route_age_months: chex.Array
+    route_travel_time_months: chex.Array
+    route_last_delivered: chex.Array
+    route_last_delay: chex.Array
+    route_reliability: chex.Array
+    route_congestion: chex.Array
+    route_station_rating: chex.Array
+    route_transit_amount: chex.Array
+    route_transit_remaining: chex.Array
+    template_path: chex.Array
+    template_path_length: chex.Array
+    template_weighted_distance: chex.Array
+    template_water_tiles: chex.Array
+    template_rough_tiles: chex.Array
+    template_town_tiles: chex.Array
+    candidate: CandidateTable
+    action_mask: chex.Array
+    metrics: chex.Array
+    score_breakdown: chex.Array
