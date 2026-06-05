@@ -1,4 +1,4 @@
-# TycoonLE (Tycoon Learning Environment)
+# Tycoon Learning Environment
 
 ![TycoonLE replay interface](assets/tycoonLE.png)
 
