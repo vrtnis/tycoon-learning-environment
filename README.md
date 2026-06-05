@@ -1,6 +1,6 @@
 # Tycoon Learning Environment
 
-[![JAX Accelerated](https://img.shields.io/badge/JAX-Accelerated-9cf.svg?style=flat-square)](https://github.com/google/jax)
+[![JAX Accelerated](assets/jax-accelerated.svg)](https://github.com/google/jax)
 
 ![TycoonLE replay interface](assets/tycoonLE.png)
 
