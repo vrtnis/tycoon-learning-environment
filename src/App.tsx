@@ -1,5 +1,6 @@
 import { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { Banknote, Box, Gauge, Landmark, Pause, Play, RotateCcw, SkipForward, Upload } from "lucide-react";
+import { BenchmarkPage } from "./components/BenchmarkPage";
 import { GameCanvas } from "./components/GameCanvas";
 import { ReplayCharts } from "./components/ReplayCharts";
 import { assertReplayManifest, familyLabel, money, observationAt } from "./sim/replay";
@@ -8,6 +9,19 @@ import type { Observation, ReplayManifest } from "./sim/types";
 const SAMPLE_REPLAY = "/sample-replay.json";
 
 export default function App(): JSX.Element {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("view") === "replay" || params.has("replay")) return <ReplayApp />;
+  return <BenchmarkPage />;
+}
+
+function openReplay(url: string): void {
+  const next = new URL(window.location.href);
+  next.searchParams.set("view", "replay");
+  next.searchParams.set("replay", url);
+  window.location.href = `${next.pathname}${next.search}${next.hash}`;
+}
+
+function ReplayApp(): JSX.Element {
   const [manifest, setManifest] = useState<ReplayManifest | null>(null);
   const [cursor, setCursor] = useState(0);
   const [playing, setPlaying] = useState(false);
