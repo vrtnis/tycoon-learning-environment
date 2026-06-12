@@ -13,7 +13,7 @@ const PROVIDER_COLORS: Record<BenchmarkModel["provider"], string> = {
   GLM: "#52525b",
   Fable: "#9a6a45",
 };
-const MODEL_ICON_BASE = "/assets/runebench/model-icons";
+const MODEL_ICON_BASE = `${import.meta.env.BASE_URL}assets/runebench/model-icons`;
 const PROVIDER_LOGOS: Record<BenchmarkModel["provider"], string> = {
   Anthropic: `${MODEL_ICON_BASE}/anthropic.svg`,
   OpenAI: `${MODEL_ICON_BASE}/openai.png`,
@@ -57,10 +57,11 @@ export function BenchmarkPage(): JSX.Element {
             <img src={tycoonReplayImage} alt="TycoonLE replay interface" />
           </div>
           <p>
-            Agent benchmark on transport economy planning tasks. Models operate a logistics company, build routes,
-            finance expansion, move cargo, and optimize delayed returns across generated worlds. The suite is inspired by
-            OpenTTD-style transport networks, the Tycoon Learning Environment, Factorio Learning Environment production
-            planning, and RuneBench-style benchmark reporting.
+            Agent benchmark on transport economy planning tasks, built on the{" "}
+            <a href="https://github.com/vrtnis/tycoon-learning-environment">Tycoon Learning Environment</a>. Models
+            operate a logistics company, build routes, finance expansion, move cargo, and optimize delayed returns across
+            generated worlds. The suite is inspired by OpenTTD-style transport networks, Factorio Learning Environment
+            production planning, and RuneBench-style benchmark reporting.
           </p>
         </div>
       </section>

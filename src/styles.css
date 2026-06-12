@@ -604,6 +604,14 @@ input {
   line-height: 1.58;
 }
 
+.bench-hero-copy a {
+  color: inherit;
+  font-weight: 800;
+  text-decoration-color: rgba(215, 184, 90, 0.78);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
 .method-card,
 .trajectory-card,
 .bench-tool {
@@ -1123,6 +1131,11 @@ input {
 .bench-shell .trajectory-card li,
 .bench-shell .cost-table-footer {
   color: #66717d;
+}
+
+.bench-shell .bench-hero-copy a {
+  color: #202a33;
+  text-decoration-color: #40566d;
 }
 
 .bench-shell .method-card,
