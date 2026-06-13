@@ -1,7 +1,9 @@
-import { Banknote, BarChart3, GitBranch, LineChart, Mountain, Network, Route, Table2 } from "lucide-react";
+import { Banknote, BarChart3, GitBranch, Github, LineChart, Mountain, Network, Route, Table2 } from "lucide-react";
 import { BENCHMARK_MODELS, TASKS, TRAJECTORY_NOTES, formatMoney, type BenchmarkModel, type TaskScores } from "../benchmark/data";
 import tycoonReplayImage from "../../assets/tycoonLE.png";
 
+const DISCORD_URL = "https://discord.gg/GPwEgANZKX";
+const TYCOON_LE_GITHUB_URL = "https://github.com/vrtnis/tycoon-learning-environment";
 const TOP_LINE_MODELS = BENCHMARK_MODELS.slice(0, 12);
 const PROVIDER_COLORS: Record<BenchmarkModel["provider"], string> = {
   Anthropic: "#8a6f51",
@@ -57,11 +59,26 @@ export function BenchmarkPage(): JSX.Element {
           </div>
           <p>
             Agent benchmark on transport economy planning tasks, built on the{" "}
-            <a href="https://github.com/vrtnis/tycoon-learning-environment">Tycoon Learning Environment</a>. Models
-            operate a logistics company, build routes, finance expansion, move cargo, and optimize delayed returns across
-            generated worlds. The suite is inspired by OpenTTD-style transport networks, Factorio Learning Environment
-            production planning, and RuneBench-style benchmark reporting.
+            <a href={TYCOON_LE_GITHUB_URL}>Tycoon Learning Environment</a>. Models operate a logistics company, build
+            routes, finance expansion, move cargo, and optimize delayed returns across generated worlds. The suite is
+            inspired by OpenTTD-style transport networks, Factorio Learning Environment production planning, and
+            RuneBench-style benchmark reporting.
           </p>
+          <div className="bench-social-links" aria-label="Project links">
+            <a className="bench-social-link" href={DISCORD_URL} target="_blank" rel="noreferrer" aria-label="Join the Discord" title="Discord">
+              <DiscordIcon />
+            </a>
+            <a
+              className="bench-social-link"
+              href={TYCOON_LE_GITHUB_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open the Tycoon Learning Environment GitHub repository"
+              title="GitHub"
+            >
+              <Github size={24} strokeWidth={2.2} />
+            </a>
+          </div>
         </div>
         <figure className="bench-hero-media">
           <img src={tycoonReplayImage} alt="TycoonLE replay interface" />
@@ -147,6 +164,17 @@ export function BenchmarkPage(): JSX.Element {
         <ModelTable models={BENCHMARK_MODELS} />
       </section>
     </main>
+  );
+}
+
+function DiscordIcon(): JSX.Element {
+  return (
+    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" focusable="false">
+      <path
+        fill="currentColor"
+        d="M19.54 5.34a16.1 16.1 0 0 0-4.02-1.24.06.06 0 0 0-.07.03c-.17.3-.37.69-.5 1a14.8 14.8 0 0 0-4.46 0 10.4 10.4 0 0 0-.51-1 .07.07 0 0 0-.07-.03 16 16 0 0 0-4.02 1.24.06.06 0 0 0-.03.02C3.32 9.16 2.62 12.86 2.96 16.5c0 .02.01.04.03.05a16.2 16.2 0 0 0 4.93 2.49.07.07 0 0 0 .08-.02c.38-.52.72-1.07 1.01-1.66.02-.04 0-.08-.04-.1-.55-.21-1.07-.46-1.57-.75-.04-.02-.04-.08 0-.11l.31-.24a.06.06 0 0 1 .07 0 11.6 11.6 0 0 0 10.32 0 .06.06 0 0 1 .07 0l.31.24c.04.03.04.09 0 .11-.5.3-1.02.54-1.57.75-.04.02-.06.06-.04.1.3.59.63 1.14 1.01 1.66.02.02.05.03.08.02a16.16 16.16 0 0 0 4.94-2.49.07.07 0 0 0 .03-.05c.42-4.21-.71-7.88-2.86-11.14a.05.05 0 0 0-.03-.02ZM8.68 14.29c-.94 0-1.72-.86-1.72-1.92s.76-1.92 1.72-1.92c.96 0 1.74.87 1.72 1.92 0 1.06-.76 1.92-1.72 1.92Zm6.65 0c-.94 0-1.72-.86-1.72-1.92s.76-1.92 1.72-1.92c.96 0 1.74.87 1.72 1.92 0 1.06-.76 1.92-1.72 1.92Z"
+      />
+    </svg>
   );
 }
 

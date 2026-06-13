@@ -620,6 +620,27 @@ input {
   text-underline-offset: 3px;
 }
 
+.bench-social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bench-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.bench-social-link svg {
+  display: block;
+  color: #000000;
+}
+
 .method-card,
 .trajectory-card,
 .bench-tool {
@@ -1144,6 +1165,12 @@ input {
 .bench-shell .bench-hero-copy a {
   color: #202a33;
   text-decoration-color: #40566d;
+}
+
+.bench-shell .bench-hero-copy a.bench-social-link,
+.bench-shell .bench-social-link svg {
+  color: #000000;
+  text-decoration: none;
 }
 
 .bench-shell .method-card,
