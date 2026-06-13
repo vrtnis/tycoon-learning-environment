@@ -3,9 +3,9 @@
 [![JAX Accelerated](assets/jax-accelerated.svg)](https://github.com/google/jax) [![Discord](https://img.shields.io/badge/Discord-Join%20server-5865F2?logo=discord&logoColor=white)](https://discord.gg/GPwEgANZKX)
 
 <p>
-  <a href="https://discord.gg/GPwEgANZKX" aria-label="Join the Discord"><img src="assets/discord.svg" alt="Discord" width="28" height="28" /></a>
+  <a href="https://discord.gg/GPwEgANZKX" aria-label="Join the Discord"><img src="assets/discord.svg" alt="Discord" width="34" height="34" /></a>
   &nbsp;
-  <a href="https://github.com/vrtnis/tycoon-learning-environment" aria-label="Open the Tycoon Learning Environment GitHub repository"><img src="assets/github.svg" alt="GitHub" width="28" height="28" /></a>
+  <a href="https://github.com/vrtnis/tycoon-learning-environment" aria-label="Open the Tycoon Learning Environment GitHub repository"><img src="assets/github.svg" alt="GitHub" width="34" height="34" /></a>
 </p>
 
 ![TycoonLE replay interface](assets/tycoonLE.png)
