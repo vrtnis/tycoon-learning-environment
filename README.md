@@ -58,6 +58,28 @@ Run tests:
 npm run build
 ```
 
+## Interactive notebooks
+
+Install the notebook dependencies:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -e ".[test,notebooks]"
+```
+
+Open a marimo notebook:
+
+```powershell
+.\.venv\Scripts\python.exe -m marimo edit notebooks\01_quickstart_rollout.py
+```
+
+The notebook set covers:
+
+| Notebook | What it covers | Try on molab |
+| --- | --- | --- |
+| [`01_quickstart_rollout.py`](notebooks/01_quickstart_rollout.py) | Interactive reset, rollout, OpenGFX sprite map render, candidate table, metrics, and replay export. | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/vrtnis/tycoon-learning-environment/blob/main/notebooks/01_quickstart_rollout.py) |
+| [`02_action_candidates_and_rewards.py`](notebooks/02_action_candidates_and_rewards.py) | Inspect candidate actions, execute a selected action, and compare reward/metric deltas with before/after sprite maps. | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/vrtnis/tycoon-learning-environment/blob/main/notebooks/02_action_candidates_and_rewards.py) |
+| [`03_jax_rollouts_and_training_smoke.py`](notebooks/03_jax_rollouts_and_training_smoke.py) | Run JAX `jit`/`vmap`/`scan` rollouts and a tiny PPO smoke train. | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/vrtnis/tycoon-learning-environment/blob/main/notebooks/03_jax_rollouts_and_training_smoke.py) |
+
 ## TycoonBench OpenRouter runs
 
 The benchmark report is generated from JSON artifacts in `src/benchmark/generated/`.
