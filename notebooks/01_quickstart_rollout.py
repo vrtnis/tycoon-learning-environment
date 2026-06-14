@@ -280,10 +280,11 @@ def _(mo):
 
 @app.cell
 def _(REPO_ROOT, json, mo, replay):
-    replay_path = REPO_ROOT / "runs" / "marimo" / "quickstart" / "replay.json"
+    replay_relative_path = "runs/marimo/quickstart/replay.json"
+    replay_path = REPO_ROOT / replay_relative_path
     replay_path.parent.mkdir(parents=True, exist_ok=True)
     replay_path.write_text(json.dumps(replay, indent=2), encoding="utf-8")
-    mo.md(f"Replay exported to `{replay_path}`.")
+    mo.md(f"Replay exported to `{replay_relative_path}`.")
     return
 
 
