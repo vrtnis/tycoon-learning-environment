@@ -11,7 +11,10 @@
     "benchmark:generate": "node benchmark/scripts/generate-tasks.mjs",
     "benchmark:run:openrouter": "node benchmark/scripts/run-openrouter.mjs",
     "benchmark:run:preview": "node benchmark/scripts/run-openrouter.mjs --dry-run",
-    "benchmark:extract": "node benchmark/scripts/extract-results.mjs"
+    "benchmark:extract": "node benchmark/scripts/extract-results.mjs",
+    "tinker:data": ".\\.venv\\Scripts\\python.exe tinker_harness/generate_sft_dataset.py",
+    "tinker:validate": ".\\.venv\\Scripts\\python.exe tinker_harness/validate_dataset.py",
+    "tinker:train": ".\\.venv\\Scripts\\python.exe tinker_harness/train_sft.py"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

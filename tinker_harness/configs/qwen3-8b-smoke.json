@@ -1,0 +1,14 @@
+{
+  "model": "Qwen/Qwen3-8B",
+  "renderer": "qwen3_disable_thinking",
+  "dataset": "results/tinker/datasets/sft-smoke.jsonl",
+  "logPath": "results/tinker/runs/qwen3-8b-sft",
+  "batchSize": 4,
+  "maxLength": 2048,
+  "learningRate": 0.0001,
+  "numEpochs": 1,
+  "maxSteps": 10,
+  "loraRank": 32,
+  "saveEvery": 5,
+  "evalEvery": 5
+}

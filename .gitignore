@@ -8,11 +8,13 @@ __pycache__/
 *.tsbuildinfo
 *.md
 !README.md
+!tinker_harness/README.md
 *.pdf
 *.pptx
 .venv*/
 runs/
 runs_*/
+results/tinker/
 tmp/
 dev-server*.log
 presentation/
