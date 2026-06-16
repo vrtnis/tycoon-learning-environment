@@ -1,6 +1,6 @@
 # Tinker Harness
 
-This folder is an isolated proof-of-concept harness for fine-tuning a Tinker LoRA model on TycoonLE planning examples.
+This folder is an experimental Tinker training harness for fine-tuning open models on TycoonLE JSON planning examples.
 
 The harness has two phases:
 
