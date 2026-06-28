@@ -1,0 +1,27 @@
+[project]
+name = "tycoon-learning-environment"
+description = "Prime/Verifiers multi-turn environment for TycoonLE logistics planning."
+tags = ["eval", "rl", "planning", "logistics", "multi-turn"]
+version = "0.1.2"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "verifiers>=0.1.14",
+    "tycoonle @ git+https://github.com/vrtnis/tycoon-learning-environment.git",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = ["tycoon_learning_environment.py", "tycoonle_eval.py", "pyproject.toml", "README.md"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.verifiers.eval]
+num_examples = 5
+rollouts_per_example = 1
+max_concurrent = 4
+max_tokens = 128
+temperature = 0.2
