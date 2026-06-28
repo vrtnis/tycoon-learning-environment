@@ -1,0 +1,19 @@
+model = "openai/gpt-4.1-mini"
+num_examples = 3
+rollouts_per_example = 1
+max_concurrent = 2
+
+[sampling]
+max_tokens = 128
+temperature = 0.2
+
+[[eval]]
+id = "tycoon-learning-environment"
+
+[eval.args]
+split = "dev"
+families = "single_route,low_cash,chain"
+seed_start = 20000
+num_examples = 3
+candidate_limit = 10
+action_budget = 4
