@@ -9,6 +9,7 @@ __pycache__/
 *.md
 !README.md
 !tinker_harness/README.md
+!hud_harness/README.md
 !environments/**/*.md
 environments/**/.prime/
 *.pdf
