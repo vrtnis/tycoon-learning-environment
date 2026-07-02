@@ -14,6 +14,8 @@ The replay UI makes policies inspectable through route choices, cargo flow, fina
 
 TycoonBench provides a companion benchmark report for comparing agent and model performance on TycoonLE planning tasks: [vrtnis.github.io/tycoonbench](https://vrtnis.github.io/tycoonbench/).
 
+**For sim-to-real validation against actual OpenTTD/FIRS behavior, see the companion backend: [vrtnis/tycoon-learning-environment-openttd](https://github.com/vrtnis/tycoon-learning-environment-openttd).**
+
 ## Install
 
 Use Python 3.11 or 3.12:
