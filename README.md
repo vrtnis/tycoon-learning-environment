@@ -12,6 +12,14 @@ TycoonLE uses a fixed-shape interface. Agents choose among valid route, finance,
 
 The replay UI makes policies inspectable through route choices, cargo flow, financing behavior, reward, score, and profit over time.
 
+## Recent updates
+
+- **OpenTTD validation:** Added a companion backend reference for testing policies against actual OpenTTD/FIRS behavior.
+- **Agent harnesses:** Added a HUD MCP harness for seeded, tool-using agent evaluations with replayable traces.
+- **Evaluation tooling:** Added a Verifiers-compatible environment and a compact local smoke-evaluation configuration.
+
+## Related projects
+
 TycoonBench provides a companion benchmark report for comparing agent and model performance on TycoonLE planning tasks: [vrtnis.github.io/tycoonbench](https://vrtnis.github.io/tycoonbench/).
 
 **For sim-to-real validation against actual OpenTTD/FIRS behavior, see the companion backend: [vrtnis/tycoon-learning-environment-openttd](https://github.com/vrtnis/tycoon-learning-environment-openttd).**

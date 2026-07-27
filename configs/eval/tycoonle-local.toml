@@ -1,3 +1,4 @@
+# Compact local smoke evaluation for quick integration checks.
 model = "openai/gpt-4.1-mini"
 num_examples = 3
 rollouts_per_example = 1
@@ -13,6 +14,7 @@ id = "tycoon-learning-environment"
 [eval.args]
 split = "dev"
 families = "single_route,low_cash,chain"
+# Keep the generated examples stable across repeated smoke runs.
 seed_start = 20000
 num_examples = 3
 candidate_limit = 10
